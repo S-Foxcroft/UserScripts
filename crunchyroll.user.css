@@ -1,0 +1,97 @@
+/* Crunchyroll Playback Focus
+ * Accompanying Styles for Userscript
+ * This layout is designed for larger screen resolutions (ie. 1440+)
+ * If you use this, take the address-regex on line 7 as the target.
+ */
+:root {
+	--vertical-offset: 120px;
+	--address-regex: "/^https?://www\.crunchyroll.com/.*/.*-[0-9]*.*/";
+}
+.wide-player-container {
+	width: 1920px !important;
+	height: 1080px;
+	left: -480px;
+}
+#showmedia_video_box_wide, #closeDiv, #main_content .large-margin-bottom, header {
+	z-index: 1500;
+}
+.blackheader {
+	background-color: black !important;
+	box-shadow: none !important;
+	color: white !important;
+}
+#closeDiv {
+	display: block;
+	color: white;
+	position: absolute;
+	right: 80px;
+	top: 90px;
+	font-weight: bolder;
+	font-size: 32pt;
+}
+#nextDiv, #prevDiv {
+	z-index: 1500;
+	display: inline-block;
+	position: fixed;
+	color: black;
+	width: 40px;
+	height: 64px;
+	background-color: white;
+	top: calc(var(--vertical-offset) + 475px);
+	text-align: center;
+	font-weight: bolder;
+	font-size: 24pt;
+	padding-top: 25px;
+}
+#prevDiv {
+	border-top-left-radius: 32px;
+	border-bottom-left-radius: 32px;
+	left: calc(50vw - 1005px);
+}
+#nextDiv {
+	border-top-right-radius: 32px;
+	border-bottom-right-radius: 32px;
+	right: calc(50vw - 1005px);
+}
+#closeDiv:hover, #nextDiv:hover, #prevDiv:hover {
+	cursor: pointer;
+}
+#closeDiv:hover {
+	color: #ff8c00;
+}
+#nextDiv:hover, #prevDiv:hover {
+	background-color: #ff8c00;
+}
+.dimmerswitch {
+	z-index: 1000;
+	background: black;
+	opacity: 0.93;
+	position: absolute;
+}
+#dsL {
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	width: calc(50vw - 965px);
+}
+#dsR {
+	top: 0px;
+	bottom: 0px;
+	right: 0px;
+	width: calc(50vw - 965px);
+}
+#dsT {
+	top: 0px;
+	right: calc(50vw - 965px);
+	left: calc(50vw - 965px);
+	height: var(--vertical-offset);
+}
+#dsB {
+	bottom: 0px;
+	right: calc(50vw - 965px);
+	left: calc(50vw - 965px);
+	top: calc(1070px + var(--vertical-offset));
+}
+#footer, #message_box, #main_content .showmedia-submenu, div.video-quality {
+	display: none !important;
+}
