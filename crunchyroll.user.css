@@ -1,7 +1,7 @@
 /* Crunchyroll Playback Focus
  * Accompanying Styles for Userscript
  * This layout is designed for larger screen resolutions (ie. 1440+)
- * If you use this, take the address-regex on line 6 as the target.
+ * If you aren't using Stylus, take the address-regex on line 6 as the target and remoive lines 6 and 98.
  */
  @-moz-document regexp("^https?://www\\.crunchyroll.com/.*/.*-[0-9]*.*") {
 :root {
