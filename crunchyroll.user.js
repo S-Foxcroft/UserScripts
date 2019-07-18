@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name     Crunchyroll Playback Focus
+// @name     Crunchyroll Playback Focus (Script)
 // @version  1.3.0
 // @grant    none
 // @include	 /^https?://www\.crunchyroll.com/.*/.*-[0-9]*.*/
