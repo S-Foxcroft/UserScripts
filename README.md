@@ -17,3 +17,10 @@ I use Stylus, which you can use on both [Firefox][st-firefox] and [Chrome][st-ch
 + Adjusts the colour of the header to black when in focused mode.
 + Adds dark overlay to the rest of the screen, allowing the video to be pride of place within the page.
 + Resizes the video player to 1920x1080 px.
+
+#### Amazon Music UK ([user.js](./aznmusic.user.js))
++ Replaces the amzon music logo (top-left) with the current time.
+
+#### All Sites - Minify ([user.js](./minify.user.js))
++ Closes the current tab and opens a minimal browser window of the page.
++ This may require adjusting a browser flag to allow scripts to close tabs or open new windows.
