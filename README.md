@@ -13,7 +13,7 @@ I use [Greasemonkey][gs-firefox] on Firefox, but you could use [Tampermonkey][gs
 I use Stylus, which you can use on both [Firefox][st-firefox] and [Chrome][st-chrome].
 
 ### Sites and Changes
-#### Crunchyroll  ([user.js](../../raw/master/crunchyroll.user.js) | [user.css](.../../raw/master/crunchyrol.user.css))  
+#### Crunchyroll  ([user.js](../../raw/master/crunchyroll.user.js) | [user.css](../../raw/master/crunchyrol.user.css))  
 + Adjusts the colour of the header to black when in focused mode.
 + Adds dark overlay to the rest of the screen, allowing the video to be pride of place within the page.
 + Resizes the video player to 1920x1080 px.
