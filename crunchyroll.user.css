@@ -1,11 +1,11 @@
 /* Crunchyroll Playback Focus
  * Accompanying Styles for Userscript
  * This layout is designed for larger screen resolutions (ie. 1440+)
- * If you use this, take the address-regex on line 7 as the target.
+ * If you use this, take the address-regex on line 6 as the target.
  */
+ @-moz-document regexp("^https?://www\\.crunchyroll.com/.*/.*-[0-9]*.*") {
 :root {
 	--vertical-offset: 120px;
-	--address-regex: "/^https?://www\.crunchyroll.com/.*/.*-[0-9]*.*/";
 }
 .wide-player-container {
 	width: 1920px !important;
@@ -94,4 +94,5 @@
 }
 #footer, #message_box, #main_content .showmedia-submenu, div.video-quality {
 	display: none !important;
+}
 }
