@@ -1,10 +1,10 @@
 /* This layout is designed for larger screen resolutions (ie. 1440+)
- * If you aren't using Stylus, take the address-regex on line 6 as the target and remoive lines 6 and 98. */
+ * If you aren't using Stylus, take the address-regex on line 10 as the target and remoive lines 6 and 98. */
  /* ==UserStyle==
 @name        Crunchyroll Playback Focus (Style)
 @namespace   github.com/S-Foxcroft/UserScripts
 @author		 Shaun Foxcroft <sfoxcroft@outlook.com> (https://github.com/S-Foxcroft)
-@version     1.0.0
+@version     1.0.1
 @license     unlicensed
 ==/UserStyle== */
  @-moz-document regexp("^https?://www\\.crunchyroll.com/.*/.*-[0-9]*.*") {
@@ -19,7 +19,7 @@
 #showmedia_video_box_wide, #closeDiv, #main_content .large-margin-bottom, header {
 	z-index: 1500;
 }
-.blackheader {
+.blackheader, .blackheader .header-menubar>ul>li {
 	background-color: black !important;
 	box-shadow: none !important;
 	color: white !important;
