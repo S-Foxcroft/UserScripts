@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name     Crunchyroll Playback Focus (Script)
-// @version  1.4.0
+// @version  1.4.1
 // @grant    none
 // @include	 /^https?://www\.crunchyroll.com/.*/.*-[0-9]*.*/
 // @author Shaun Foxcroft <sfoxcroft@outlook.com> (https://github.com/S-Foxcroft)
@@ -20,9 +20,7 @@ function run(){
   for(i=0;i<ea.length;i++){
     ea[i].style = ""; 
   }
-  if(!window.userjs) window.userjs = {};
-  window.userjs.dim = false;
-  
+  if(!window.userjs) window.userjs = {};  
   console.log("~ Insertion");
   
   var closeDiv = document.createElement("div");
@@ -85,6 +83,7 @@ function closeBox(){
     destroy(del[0]);
     document.getElementsByTagName("header")[0].className = document.getElementsByTagName("header")[0]
                                                            .className.replace(" blackheader","");
+	window.userjs.dim = false;
 }
 function openBox(){
 	var me = document.getElementById("closeDiv");
@@ -99,6 +98,7 @@ function openBox(){
         elem.className = "dimmerswitch";
   	    document.body.appendChild(elem);
     });
+	window.userjs.dim = true;
 }
 
 setTimeout(run,75);
