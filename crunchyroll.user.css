@@ -4,7 +4,7 @@
 @name        Crunchyroll Playback Focus (Style)
 @namespace   github.com/S-Foxcroft/UserScripts
 @author		 Shaun Foxcroft <sfoxcroft@outlook.com> (https://github.com/S-Foxcroft)
-@version     1.1
+@version     1.1.0
 @license     unlicensed
 ==/UserStyle== */
  @-moz-document regexp("^https?://www\\.crunchyroll.com/.*/.*-[0-9]*.*") {
