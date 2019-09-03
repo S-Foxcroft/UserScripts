@@ -4,7 +4,7 @@
 @name        Crunchyroll Playback Focus (Style)
 @namespace   github.com/S-Foxcroft/UserScripts
 @author		 Shaun Foxcroft <sfoxcroft@outlook.com> (https://github.com/S-Foxcroft)
-@version     1.1.4
+@version     1.1.5
 @license     unlicensed
 ==/UserStyle== */
  @-moz-document regexp("^https?://www\\.crunchyroll.com/.*/.*-[0-9]*.*") {
@@ -27,10 +27,10 @@
 #closeDiv {
 	display: block;
 	position: absolute;
-	right: 90px;
-	top: 85px;
+	right: 100px;
+	top: 95px;
 	font-weight: bold;
-	font-size: 22pt;
+	font-size: 12pt;
 	text-transform: uppercase;
 }
 #closeDiv.on {
