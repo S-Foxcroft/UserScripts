@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name     Crunchyroll Playback Focus (Script)
-// @version  1.4.3
+// @version  1.4.4
 // @grant    none
 // @include	 /^https?://www\.crunchyroll.com/.*/.*-[0-9]*.*/
 // @author Shaun Foxcroft <sfoxcroft@outlook.com> (https://github.com/S-Foxcroft)
@@ -34,8 +34,11 @@ function run(){
 	  if(localStorage["dim"]) closeBox();
 	  else openBox();
   });
-  openBox();
-  if(localStorage["dim"]) closeBox();
+   if(localStorage["dim"] == true) {
+    openBox();
+    closeBox();
+  }
+  else openBox();
   
   
   console.log("~ Previous and Next - Only required if episode is listed");
