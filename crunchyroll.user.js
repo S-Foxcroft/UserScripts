@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name     Crunchyroll Playback Focus (Script)
-// @version  1.4.2
+// @version  1.4.3
 // @grant    none
 // @include	 /^https?://www\.crunchyroll.com/.*/.*-[0-9]*.*/
 // @author Shaun Foxcroft <sfoxcroft@outlook.com> (https://github.com/S-Foxcroft)
@@ -31,10 +31,11 @@ function run(){
   prevDiv.innerText = "<";
   document.body.appendChild(closeDiv);
   closeDiv.addEventListener('click',function(){
-	  if(window.userjs.dim) closeBox();
+	  if(localStorage["dim"]) closeBox();
 	  else openBox();
   });
   openBox();
+  if(localStorage["dim"]) closeBox();
   
   
   console.log("~ Previous and Next - Only required if episode is listed");
@@ -81,7 +82,7 @@ function closeBox(){
     destroy(del[0]);
     document.getElementsByTagName("header")[0].className = document.getElementsByTagName("header")[0]
                                                            .className.replace(" blackheader","");
-	window.userjs.dim = false;
+	localStorage["dim"] = false;
 }
 function openBox(){
 	document.getElementsByTagName("header")[0].className += " blackheader";
@@ -98,7 +99,7 @@ function openBox(){
         elem.className = "dimmerswitch";
   	    document.body.appendChild(elem);
     });
-	window.userjs.dim = true;
+	localStorage["dim"] = true;
 }
 
 setTimeout(run,75);
