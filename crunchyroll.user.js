@@ -14,8 +14,6 @@ function run(){
   }
 	player.width="1920";
 	player.height="1080";
-  
-  document.getElementsByTagName("header")[0].className += " blackheader";
   var ea = document.getElementsByTagName("nav")[0].getElementsByTagName("li");
   for(i=0;i<ea.length;i++){
     ea[i].style = ""; 
@@ -75,7 +73,7 @@ function destroy(elem){
 function closeBox(){
 	var me = document.getElementById("closeDiv");
 	me.innerText = "Lights off";
-	me.classname = "off";
+	me.className = "off";
   	var del = document.getElementsByClassName("dimmerswitch");
     destroy(del[0]);
     destroy(del[0]);
@@ -86,9 +84,10 @@ function closeBox(){
 	window.userjs.dim = false;
 }
 function openBox(){
+	document.getElementsByTagName("header")[0].className += " blackheader";
 	var me = document.getElementById("closeDiv");
 	me.innerText = "Lights back on";
-	me.classname = "on";
+	me.className = "on";
 	var newDivs = [document.createElement("div"),document.createElement("div"),document.createElement("div"),
                  document.createElement("div")];
 	newDivs[0].id="dsL";
