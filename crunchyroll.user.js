@@ -87,6 +87,8 @@ function closeBox(){
                                                            .className.replace(" blackheader","");
 }
 function openBox(){
+	var me = document.getElementById("closeDiv");
+	me.innerText = "Lights back on";
 	var newDivs = [document.createElement("div"),document.createElement("div"),document.createElement("div"),
                  document.createElement("div")];
 	newDivs[0].id="dsL";
