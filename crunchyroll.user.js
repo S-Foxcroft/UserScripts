@@ -34,7 +34,7 @@ function run(){
 	  if(localStorage["dim"]) closeBox();
 	  else openBox();
   });
-   if(localStorage["dim"] == true) {
+   if(localStorage["dim"] == false) {
     openBox();
     closeBox();
   }
