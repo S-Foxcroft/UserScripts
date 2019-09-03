@@ -19,7 +19,7 @@
 #showmedia_video_box_wide, #closeDiv, #main_content .large-margin-bottom, header {
 	z-index: 1500;
 }
-.blackheader, .blackheader .header-menubar>ul>li {
+.blackheader, .blackheader .header-menubar>ul>li, #header_search_input {
 	background-color: black !important;
 	box-shadow: none !important;
 	color: white !important;
