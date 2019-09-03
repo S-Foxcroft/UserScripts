@@ -4,7 +4,7 @@
 @name        Crunchyroll Playback Focus (Style)
 @namespace   github.com/S-Foxcroft/UserScripts
 @author		 Shaun Foxcroft <sfoxcroft@outlook.com> (https://github.com/S-Foxcroft)
-@version     1.1.0
+@version     1.1.1
 @license     unlicensed
 ==/UserStyle== */
  @-moz-document regexp("^https?://www\\.crunchyroll.com/.*/.*-[0-9]*.*") {
@@ -26,12 +26,17 @@
 }
 #closeDiv {
 	display: block;
-	color: white;
 	position: absolute;
 	right: 80px;
-	top: 90px;
-	font-weight: bolder;
-	font-size: 24pt;
+	top: 85px;
+	font-weight: bold;
+	font-size: 22pt;
+}
+#closeDiv.on {
+	color: white;
+}
+#closeDiv.off {
+	color: black;
 }
 #nextDiv, #prevDiv {
 	z-index: 1500;
@@ -63,12 +68,7 @@
 #closeDiv:hover {
 	color: #ff8c00;
 }
-.on#closeDiv{
-	color: white;
-}
-.off#closeDiv{
-	color: black;
-}
+
 #nextDiv:hover, #prevDiv:hover {
 	background-color: #ff8c00;
 }

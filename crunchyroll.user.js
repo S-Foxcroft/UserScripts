@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name     Crunchyroll Playback Focus (Script)
-// @version  1.4.1
+// @version  1.4.2
 // @grant    none
 // @include	 /^https?://www\.crunchyroll.com/.*/.*-[0-9]*.*/
 // @author Shaun Foxcroft <sfoxcroft@outlook.com> (https://github.com/S-Foxcroft)
@@ -27,7 +27,6 @@ function run(){
   var nextDiv = document.createElement("div");
   var prevDiv = document.createElement("div");
   closeDiv.id = "closeDiv";
-  closeDiv.innerText = "Lights back on";
   nextDiv.id="nextDiv";
   nextDiv.innerText = ">";
   prevDiv.id="prevDiv";
@@ -76,6 +75,7 @@ function destroy(elem){
 function closeBox(){
 	var me = document.getElementById("closeDiv");
 	me.innerText = "Lights off";
+	me.classname = "off";
   	var del = document.getElementsByClassName("dimmerswitch");
     destroy(del[0]);
     destroy(del[0]);
@@ -88,6 +88,7 @@ function closeBox(){
 function openBox(){
 	var me = document.getElementById("closeDiv");
 	me.innerText = "Lights back on";
+	me.classname = "on";
 	var newDivs = [document.createElement("div"),document.createElement("div"),document.createElement("div"),
                  document.createElement("div")];
 	newDivs[0].id="dsL";
