@@ -1,15 +1,16 @@
 /* This layout is designed for larger screen resolutions (ie. 1440+)
- * If you aren't using Stylus, take the address-regex on line 10 as the target and remoive lines 6 and 98. */
+ * If you aren't using Stylus, take the address-regex on line 10 as the target and remove lines 10 and 110. */
  /* ==UserStyle==
 @name        Crunchyroll Playback Focus (Style)
 @namespace   github.com/S-Foxcroft/UserScripts
 @author		 Shaun Foxcroft <sfoxcroft@outlook.com> (https://github.com/S-Foxcroft)
-@version     1.1.5
+@version     1.2.0
 @license     unlicensed
 ==/UserStyle== */
  @-moz-document regexp("^https?://www\\.crunchyroll.com/.*/.*-[0-9]*.*") {
 :root {
-	--vertical-offset: 120px;
+	--v: 120px;
+	--h: 968px;
 }
 .wide-player-container {
 	width: 1920px !important;
@@ -42,12 +43,12 @@
 #nextDiv, #prevDiv {
 	z-index: 1500;
 	display: inline-block;
-	position: fixed;
+	position: absolute;
 	color: black;
 	width: 40px;
 	height: 64px;
 	background-color: white;
-	top: calc(var(--vertical-offset) + 475px);
+	top: calc(var(--v) + 475px);
 	text-align: center;
 	font-weight: bolder;
 	font-size: 22pt;
@@ -56,12 +57,12 @@
 #prevDiv {
 	border-top-left-radius: 32px;
 	border-bottom-left-radius: 32px;
-	right: calc(50vw - 510px);
+	right: calc(50vw + 950px);
 }
 #nextDiv {
 	border-top-right-radius: 32px;
 	border-bottom-right-radius: 32px;
-	left: calc(50vw + 510px);
+	left: calc(50vw + 950px);
 }
 #closeDiv:hover, #nextDiv:hover, #prevDiv:hover {
 	cursor: pointer;
@@ -83,25 +84,25 @@
 	top: 0px;
 	bottom: 0px;
 	left: 0px;
-	width: calc(50vw - 965px);
+	width: calc(50vw - var(--h));
 }
 #dsR {
 	top: 0px;
 	bottom: 0px;
 	right: 0px;
-	width: calc(50vw - 965px);
+	width: calc(50vw - var(--h));
 }
 #dsT {
 	top: 0px;
-	right: calc(50vw - 965px);
-	left: calc(50vw - 965px);
-	height: var(--vertical-offset);
+	right: calc(50vw - var(--h));
+	left: calc(50vw - var(--h));
+	height: calc(var(--v) - 3px);
 }
 #dsB {
 	bottom: 0px;
-	right: calc(50vw - 965px);
-	left: calc(50vw - 965px);
-	top: calc(1070px + var(--vertical-offset));
+	right: calc(50vw - var(--h));
+	left: calc(50vw - var(--h));
+	top: calc(1075px + var(--v));
 }
 #footer, #message_box, #main_content .showmedia-submenu, div.video-quality {
 	display: none !important;
