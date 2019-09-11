@@ -31,7 +31,7 @@ function run(){
   prevDiv.innerText = "<";
   document.body.appendChild(closeDiv);
   closeDiv.addEventListener('click',function(){
-	  if(localStorage["dim"] == "false") closeBox();
+	  if(localStorage["dim"] == "true") closeBox();
 	  else openBox();
   });
    if(localStorage["dim"] == "false") {
