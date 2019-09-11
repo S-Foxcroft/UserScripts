@@ -12,6 +12,8 @@ I use [Greasemonkey][gs-firefox] on Firefox, but you could use [Tampermonkey][gs
 3. Copy the contents of the user.css file into your favourite styling extension.  
 I use Stylus, which you can use on both [Firefox][st-firefox] and [Chrome][st-chrome].
 
+Alternatively, some extnesions allow the installation of userscripts, if the prompt for your extension opens please follow it in place of steps 2 and 3.
+
 ### Sites and Changes
 #### Crunchyroll  ([user.js](../../raw/master/crunchyroll.user.js) | [user.css](../../raw/master/crunchyroll.user.css))  
 + Adjusts the colour of the header to black when in focused mode.
