@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name     Crunchyroll Playback Focus (Script)
-// @version  1.5.1
+// @version  1.5.2
 // @grant    none
 // @include	 /^https?://www\.crunchyroll.com/.*/.*-[0-9]*.*/
 // @author Shaun Foxcroft <sfoxcroft@outlook.com> (https://github.com/S-Foxcroft)
