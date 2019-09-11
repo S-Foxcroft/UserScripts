@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name     Crunchyroll Playback Focus (Script)
-// @version  1.5.0
+// @version  1.5.1
 // @grant    none
 // @include	 /^https?://www\.crunchyroll.com/.*/.*-[0-9]*.*/
 // @author Shaun Foxcroft <sfoxcroft@outlook.com> (https://github.com/S-Foxcroft)
@@ -31,12 +31,12 @@ function run(){
   prevDiv.innerText = "<";
   document.body.appendChild(closeDiv);
   closeDiv.addEventListener('click',function(){
-	  if(localStorage["dim"]) closeBox();
+	  if(localStorage["dim"] == "false") closeBox();
 	  else openBox();
   });
-   if(localStorage["dim"] == false) {
+   if(localStorage["dim"] == "false") {
     openBox();
-    closeBox();
+	closeBox();
   }
   else openBox();
   
